@@ -15,8 +15,8 @@ class ListNode:
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         # initialize
-        dummy_head = ListNode()  # dummy head
-        current = dummy_head  # initialize current node to dummy head
+        dummy_head = ListNode()  # dummy head --> necessary to keep placeholder at front as 'current' will eventually be pointing to the last node in the new list
+        current = dummy_head
         carry = 0
 
         # traverse linked lists
@@ -48,6 +48,7 @@ class Solution:
             else:
                 l2 = None
 
+            # add node to the list
             current.next = ListNode(val=total)
             current = current.next
 
