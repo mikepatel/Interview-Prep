@@ -11,16 +11,17 @@ class Solution:
         for i in range(len(s)):  # first pointer
             substring = s[i]  # reset
             characters = {}  # reset
-            characters[s[i]] = True
+            characters[s[i]] = True  # character has now been seen
             j = i + 1  # second pointer
 
             while (j < len(s)) and (s[j] not in characters):
-                characters[s[j]] = True
+                characters[s[j]] = True  # character has now been seen
                 substring += s[j]
                 j += 1
 
-            # found a repeat character
+            # found a repeat character OR reached end of string
             if len(substring) > max_length:
                 max_length = len(substring)
 
         return max_length
+
