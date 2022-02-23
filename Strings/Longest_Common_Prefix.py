@@ -5,7 +5,6 @@ https://leetcode.com/problems/longest-common-prefix/
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        result = ""
 
         # edge cases
         if len(strs) == 0:
@@ -19,22 +18,14 @@ class Solution:
             strs = sorted(strs, key=len)  # sorted based on length
             shortest_string = strs[0]
             prefix = ""
-            matches = [False for i in range(len(strs))]
-            matches[0] = True
 
             for character in shortest_string:
+                # create prefix candidate
                 prefix = prefix + character
 
                 # check other strings
                 for i in range(1, len(strs)):
-                    if strs[i].startswith(prefix):
-                        matches[i] = True
-                    else:
-                        matches[i] = False
-                        break
+                    if not strs[i].startswith(prefix):
+                        return prefix[:-1]
 
-                if not all(matches):
-                    return prefix[:-1]  # drop last character
-
-            result = prefix
-            return result
+            return prefix
