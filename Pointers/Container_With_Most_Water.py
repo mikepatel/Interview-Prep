@@ -29,7 +29,7 @@ class Solution:
                 # move left-side pointer
                 i += 1
 
-            else:
+            else:  # height[i] >= height[j]
                 area = width * height[j]
                 areas.append(area)
 
