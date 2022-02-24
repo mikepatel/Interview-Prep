@@ -36,7 +36,7 @@ class Solution:
                         output.append([a, b, c])
                         j = j + 1
 
-                        # eliminate duplicates
+                        # eliminate duplicates by sliding left-hand side pointer upwards
                         while (j < k) and (nums[j] == nums[j - 1]):
                             j = j + 1
 
