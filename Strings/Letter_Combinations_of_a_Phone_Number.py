@@ -23,7 +23,7 @@ class Solution:
             "9": ["w", "x", "y", "z"]
         }
 
-        output = []  # list of lists
+        output = []
         for d in digits:
             if len(output) == 0:  # first digit
                 for letter in mapper[d]:
