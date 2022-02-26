@@ -23,11 +23,11 @@ class Solution:
 
             else:
                 output.next = list2  # set next node
-                
+
                 output = output.next  # advance
                 list2 = list2.next  # advance
 
-        # at least one is empty
+        # at least one is still non-empty
         if list1:
             output.next = list1
 
