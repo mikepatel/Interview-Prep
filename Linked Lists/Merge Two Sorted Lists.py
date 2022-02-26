@@ -17,11 +17,13 @@ class Solution:
         while list1 and list2:  # while both are non-empty
             if list1.val <= list2.val:
                 output.next = list1  # set next node
+
                 output = output.next  # advance
                 list1 = list1.next  # advance
 
             else:
                 output.next = list2  # set next node
+                
                 output = output.next  # advance
                 list2 = list2.next  # advance
 
