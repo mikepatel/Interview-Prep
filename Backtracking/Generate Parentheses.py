@@ -5,6 +5,11 @@ https://leetcode.com/problems/generate-parentheses/
 
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
+        """
+        backtracking
+        recursion
+        enumeration
+        """
 
         # Backtracking
         def backtrack(candidate, num_left_parentheses, num_right_parentheses):
