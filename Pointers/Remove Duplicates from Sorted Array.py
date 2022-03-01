@@ -17,3 +17,5 @@ class Solution:
                 nums.pop(i)
 
             i += 1
+
+        return len(nums)
