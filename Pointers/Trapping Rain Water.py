@@ -20,6 +20,7 @@ class Solution:
             current_height_left = height[left]
             current_height_right = height[right]
 
+            # left check
             if current_height_left < current_height_right:
                 if current_height_left > max_height_left:
                     max_height_left = current_height_left
@@ -30,6 +31,7 @@ class Solution:
 
                 left = left + 1  # move left pointer
 
+            # right check
             else:  # current_height_left <= current_height_right
                 if current_height_right > max_height_right:
                     max_height_right = current_height_right
