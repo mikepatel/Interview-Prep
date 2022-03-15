@@ -10,6 +10,10 @@ https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 #         self.next = next
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        """
+        1. calculate target
+        2. modifying the same Linked List --> while head:
+        """
         # find length of linked list
         num_nodes = 0
 
@@ -18,12 +22,13 @@ class Solution:
             temp = temp.next
             num_nodes += 1
 
-        #
+        #####
         # remove Nth from the last node
         target = num_nodes - n
         i = 0
+
         prev = ListNode(val=None, next=head)
-        dummy = head
+        dummy = head  # placeholder
 
         while head:
             if target == 0:  # edge case: remove first node in LinkedList
