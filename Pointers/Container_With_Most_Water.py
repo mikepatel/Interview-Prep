@@ -5,12 +5,16 @@ https://leetcode.com/problems/container-with-most-water/
 
 class Solution:
     def maxArea(self, height: List[int]) -> int:
+        """
+        BRUTE FORCE --> TWO POINTERS (left and right)
+        """
         # initialize
         max_area = 0
         i = 0  # first pointer
         j = len(height) - 1  # second pointer
         areas = []
 
+        # APPROACH 1: BRUTE FORCE
         # brute force
         # for i in range(len(height)-1):
         #     for j in range(i+1, len(height)):
@@ -18,6 +22,7 @@ class Solution:
         #         if area > max_area:
         #             max_area = area
 
+        # APPROACH 2: TWO POINTERS
         # two pointers
         while i < j:
             width = j - i
