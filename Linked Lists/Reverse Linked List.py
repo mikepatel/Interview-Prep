@@ -10,6 +10,7 @@ https://leetcode.com/problems/reverse-linked-list/
 #         self.next = next
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        """
         # initialize
         prev = None
         current = head
@@ -20,5 +21,17 @@ class Solution:
             prev = current  # want current node to become previous node, step 1
 
             current = temp  # iterate
+
+        return prev
+        """
+
+        # initialize
+        prev = None
+
+        while head:
+            temp = head.next
+            head.next = prev
+            prev = head
+            head = temp
 
         return prev
