@@ -20,16 +20,16 @@ class Solution:
 
         #
         # remove Nth from the last node
-        x = num_nodes - n
+        target = num_nodes - n
         i = 0
         prev = ListNode(val=None, next=head)
         dummy = head
 
         while head:
-            if x == 0:  # edge case: remove first node in LinkedList
+            if target == 0:  # edge case: remove first node in LinkedList
                 return head.next
 
-            elif i == x:  # remove Nth node in LinkedList
+            elif i == target:  # remove Nth node in LinkedList
                 prev.next = head.next
                 head = head.next
 
