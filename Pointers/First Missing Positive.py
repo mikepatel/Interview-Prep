@@ -13,7 +13,7 @@ class Solution:
                 if n not in mapper:
                     mapper[n] = True
 
-        # check if mapper is empty
+        # EDGE CASE: check if mapper is empty
         if not mapper:
             return 1
 
