@@ -10,6 +10,10 @@ https://leetcode.com/problems/merge-two-sorted-lists/
 #         self.next = next
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        1. Create a new Linked List --> dummy = ListNode()
+                                        current = dummy
+        """
 
         dummy = ListNode()  # dummy head
         current = dummy

@@ -11,6 +11,9 @@ https://leetcode.com/problems/reverse-linked-list/
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         """
+        1. Modifying the same Linked List --> while head:
+        """
+        """
         # initialize
         prev = None
         current = head
