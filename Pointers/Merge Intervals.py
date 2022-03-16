@@ -5,7 +5,10 @@ https://leetcode.com/problems/merge-intervals/
 
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-
+        """
+        1. SORT over all pairs
+        2. MERGE
+        """
         # sort
         intervals = sorted(intervals, key=lambda x: x[0])
 
@@ -28,8 +31,9 @@ class Solution:
 
             else:  # do overlap
                 if current_right > right:
-                    right = current_right
+                    right = current_right  # update right pointer
 
+        # last pair
         output.append([left, right])
 
         return output
