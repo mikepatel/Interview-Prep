@@ -6,7 +6,7 @@ https://leetcode.com/problems/spiral-matrix/
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
 
-        # 4 POINTERS
+        # 4 POINTERS: top, bottom, left, right
         num_rows = len(matrix)
         num_cols = len(matrix[0])
 
