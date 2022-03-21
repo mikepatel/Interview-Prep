@@ -30,5 +30,5 @@ class Solution:
         index = 0
         for value in range(3):  # 0, 1, 2
             for _ in range(freqs[value]):
-                nums[index] = value
-                index += 1
+                nums[index] = value  # what needs to go in
+                index += 1  # where it needs to go in
