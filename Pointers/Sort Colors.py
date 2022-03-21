@@ -32,3 +32,17 @@ class Solution:
             for _ in range(freqs[value]):
                 nums[index] = value  # what needs to go in
                 index += 1  # where it needs to go in
+
+        # 3rd solution: 1 for-loop
+        for i in range(len(nums)):
+            if freqs[0] > 0:
+                nums[i] = 0
+                freqs[0] -= 1
+
+            elif freqs[1] > 0:
+                nums[i] = 1
+                freqs[1] -= 1
+
+            else:  # freqs[2] > 0
+                nums[i] = 2
+                freqs[2] -= 1
