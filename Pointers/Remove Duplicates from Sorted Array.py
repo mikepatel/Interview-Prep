@@ -12,7 +12,7 @@ class Solution:
 
         # approach 2: pointer --> while loop
         i = 0
-        while i < len(nums) - 1:
+        while i < len(nums) - 1:  # cannot use for-loop because modifying the length of nums --> index out of range
             if nums[i] == nums[i + 1]:
                 nums.pop(i + 1)
 
