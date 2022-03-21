@@ -29,6 +29,6 @@ class Solution:
         # Using a for-loop instead of a while-loop
         index = 0
         for value in range(3):  # 0, 1, 2
-            for i in range(freqs[value]):
+            for _ in range(freqs[value]):
                 nums[index] = value
                 index += 1
