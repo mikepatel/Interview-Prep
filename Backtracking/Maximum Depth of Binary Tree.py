@@ -14,15 +14,16 @@ class Solution:
 
         # backtrack
         def dfs(node, depth):
+            # pre-order traversal
+
             # stopping condition
             if node is None:
                 return depth
 
             else:
-                # pre-order traversal
                 return max(
-                    dfs(node=node.left, depth=depth + 1),
-                    dfs(node=node.right, depth=depth + 1)
+                    dfs(node=node.left, depth=depth + 1),  # left subtree
+                    dfs(node=node.right, depth=depth + 1)  # right subtree
                 )
 
         # driver code
