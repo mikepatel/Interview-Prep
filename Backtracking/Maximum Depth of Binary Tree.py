@@ -13,18 +13,18 @@ class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
 
         # backtrack
-        def dfs(root, depth):
+        def dfs(node, depth):
             # stopping condition
-            if root is None:
+            if node is None:
                 return depth
 
             else:
                 # pre-order traversal
                 return max(
-                    dfs(root=root.left, depth=depth + 1),
-                    dfs(root=root.right, depth=depth + 1)
+                    dfs(node=node.left, depth=depth + 1),
+                    dfs(node=node.right, depth=depth + 1)
                 )
 
         # driver code
-        max_depth = dfs(root=root, depth=0)
+        max_depth = dfs(node=root, depth=0)
         return max_depth
